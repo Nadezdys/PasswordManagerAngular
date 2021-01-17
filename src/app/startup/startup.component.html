@@ -1,0 +1,50 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark bg-primary" [containerInside]="false">
+    <mdb-navbar-brand><a class="navbar-brand" href="#">PasswordManager</a></mdb-navbar-brand>
+</mdb-navbar>
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+            <img
+              src="assets/login.jpg"
+              class="card-img-top"
+            />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+            </a>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Login</h5>
+            <p class="card-text">
+              Pokud máte účet, zde se přihlašte.
+            </p>
+            <button routerLink="login"class="btn btn-primary">Přihlášení</button>
+          </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+          <img
+            src="assets/regist.jpg"
+            class="card-img-top"
+          />
+          <a href="#!">
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+          </a>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Sign up</h5>
+          <p class="card-text">
+            Pokud nemáte účet, zde se můžete zaregistrovat.
+          </p>
+          <button routerLink="register" class="btn btn-primary">Registrace</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <router-outlet></router-outlet>

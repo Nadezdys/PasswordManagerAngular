@@ -1,0 +1,48 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark bg-primary" [containerInside]="false">
+    <mdb-navbar-brand><a class="navbar-brand" href="#">PasswordManager</a></mdb-navbar-brand>
+</mdb-navbar>
+
+<div class="container">
+</div>
+
+<div [style.display]="showModal ? 'block' : 'none'" class="modal" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+ <div class="modal-header">
+   <h4 class="modal-title" id="myModalLabel">Registrace</h4>
+ </div>
+ <div class="modal-body">
+     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+         <div class="form-group">
+             <label>Uživ.jméno</label>
+             <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+             <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                 <div *ngIf="f.username.errors.required">Pole uživ.jméno je povinné.</div>
+             </div>
+             <label>Email</label>
+             <input type="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+             <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                 <div *ngIf="f.email.errors.required">Pole email je povinné.</div>
+             </div>
+             <label>Heslo</label>
+             <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+             <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                 <div *ngIf="f.password.errors.required">Heslo je povinné.</div>
+             </div>
+          
+           </div>
+
+       <button type="submit" class="btn btn-primary">Registrovat</button>
+     </form>
+ </div>
+ <div class="modal-footer">
+     <button type="button" class="btn btn-dark" data-dismiss="modal" (click) = "hide()">Zavřít</button>
+ 
+ </div>
+</div>
+</div>
+</div>
+
+
+
+

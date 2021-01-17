@@ -1,0 +1,38 @@
+<div class="form-froup row">
+    <label class="col-sm-2 col-form-label">Název</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="title"
+        placeholder="Vložte název">
+    </div>
+    <label class="col-sm-2 col-form-label">Uživ.jméno</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="username"
+        placeholder="Vložte už. jméno">
+    </div>
+    <label class="col-sm-2 col-form-label">Heslo</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="password"
+        placeholder="Vložte heslo">
+    </div>
+    <label class="col-sm-2 col-form-label">Webpage</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="webpage"
+        placeholder="Vložte webovou stránku">
+    </div>
+    <label class="col-sm-2 col-form-label">Poznámka</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="note"
+        placeholder="Poznámka">
+    </div>
+</div>
+<div class="modal-footer">
+
+
+<button (click)="addData()" *ngIf="data.id==0" class="btn btn-primary">
+    Přidat
+</button>
+
+<button (click)="updateData()" *ngIf="data.id!=0" class="btn btn-primary">
+    Aktualizovat
+</button>
+
